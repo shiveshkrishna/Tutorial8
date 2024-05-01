@@ -7,10 +7,7 @@ editor: visual
 ```{r}
 library(readr)
 library(ggplot2)
-<<<<<<< HEAD
 library(tidyverse)
-=======
->>>>>>> 3ad4e72e5669274743a94fb90db3ce0397669637
 ```
 
 ```{r}
@@ -39,8 +36,6 @@ ggplot(data_summary, aes(x = Year, y = Total_Incidents, color = `Offence Divisio
 ```
 
 
-
-=======
 ```{r}
 ggplot(data = Data_Tutorial, aes(x = `Incidents Recorded`, y = `Rate per 100,000 population`, color = `Offence Division`)) +
   geom_point() +  # Use points for a scatter plot
@@ -51,4 +46,3 @@ ggplot(data = Data_Tutorial, aes(x = `Incidents Recorded`, y = `Rate per 100,000
 
 ```
 
->>>>>>> 3ad4e72e5669274743a94fb90db3ce0397669637
