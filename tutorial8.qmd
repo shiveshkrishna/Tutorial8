@@ -6,10 +6,20 @@ editor: visual
 
 ```{r}
 library(readr)
+library(ggplot2)
 ```
-
 
 ```{r}
 Data_Tutorial <- read_csv("Data_Tables_Criminal_Incidents_Visualisation_Year_Ending_December_2019.csv")
+```
+
+```{r}
+ggplot(data = Data_Tutorial, aes(x = `Incidents Recorded`, y = `Rate per 100,000 population`, color = `Offence Division`)) +
+  geom_point() +  # Use points for a scatter plot
+  labs(title = "Relationship between Incidents and Rate per 100,000 Population",
+       x = "Incidents Recorded",
+       y = "Rate per 100,000 Population") +
+  theme_minimal()  # Use a minimal theme for simplicity
+
 ```
 
