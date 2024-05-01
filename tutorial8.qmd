@@ -7,13 +7,17 @@ editor: visual
 ```{r}
 library(readr)
 library(ggplot2)
+<<<<<<< HEAD
 library(tidyverse)
+=======
+>>>>>>> 3ad4e72e5669274743a94fb90db3ce0397669637
 ```
 
 ```{r}
 Data_Tutorial <- read_csv("Data_Tables_Criminal_Incidents_Visualisation_Year_Ending_December_2019.csv")
 ```
 
+<<<<<<< HEAD
 
 ```{r}
 # Group by 'Year' and 'Offence Division', and summarize the total Incidents Recorded
@@ -36,3 +40,15 @@ ggplot(data_summary, aes(x = Year, y = Total_Incidents, color = `Offence Divisio
 
 
 
+=======
+```{r}
+ggplot(data = Data_Tutorial, aes(x = `Incidents Recorded`, y = `Rate per 100,000 population`, color = `Offence Division`)) +
+  geom_point() +  # Use points for a scatter plot
+  labs(title = "Relationship between Incidents and Rate per 100,000 Population",
+       x = "Incidents Recorded",
+       y = "Rate per 100,000 Population") +
+  theme_minimal()  # Use a minimal theme for simplicity
+
+```
+
+>>>>>>> 3ad4e72e5669274743a94fb90db3ce0397669637
