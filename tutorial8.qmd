@@ -16,8 +16,7 @@ library(tidyverse)
 Data_Tutorial <- read_csv("Data_Tables_Criminal_Incidents_Visualisation_Year_Ending_December_2019.csv")
 ```
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
 ```{r}
 # Group by 'Year' and 'Offence Division', and summarize the total Incidents Recorded
