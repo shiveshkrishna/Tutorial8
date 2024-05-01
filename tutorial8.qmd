@@ -6,10 +6,20 @@ editor: visual
 
 ```{r}
 library(readr)
+library(ggplot2)
 ```
-
 
 ```{r}
 Data_Tutorial <- read_csv("Data_Tables_Criminal_Incidents_Visualisation_Year_Ending_December_2019.csv")
+```
+
+```{r}
+# Create a boxplot with ggplot
+ggplot(data = Data_Tutorial, aes(x = `Offence Division`, y = `Incidents Recorded`, fill = `Offence Division`)) +
+  geom_boxplot() +  # Use boxplots to visualize the distribution
+  labs(title = "Distribution of Incidents Recorded by Offence Division",
+       x = "Offence Division",
+       y = "Incidents Recorded") +
+  theme_minimal()  # Use a minimal theme
 ```
 
