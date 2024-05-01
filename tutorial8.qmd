@@ -6,10 +6,33 @@ editor: visual
 
 ```{r}
 library(readr)
+library(ggplot2)
+library(tidyverse)
 ```
-
 
 ```{r}
 Data_Tutorial <- read_csv("Data_Tables_Criminal_Incidents_Visualisation_Year_Ending_December_2019.csv")
 ```
+
+
+```{r}
+# Group by 'Year' and 'Offence Division', and summarize the total Incidents Recorded
+data_summary <- Data_Tutorial %>%
+  group_by(Year, `Offence Division`) %>%
+  summarise(Total_Incidents = sum(`Incidents Recorded`))
+
+# Create ggplot
+ggplot(data_summary, aes(x = Year, y = Total_Incidents, color = `Offence Division`)) +
+  geom_line() +
+  geom_point() +
+  labs(title = "Total Incidents Recorded by Year and Offence Division",
+       x = "Year",
+       y = "Total Incidents Recorded",
+       color = "Offence Division") +
+  theme_minimal()
+
+
+```
+
+
 
